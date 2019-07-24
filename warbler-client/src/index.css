@@ -1,12 +1,12 @@
-body {
-background-color: #e6ecf0;
+html, body {
+  background-color: #e6ecf0;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  width: 100%;
 }
 
 /* Nav */
 
-.navbar {
-  margin-bottom: 1rem;
-}
 
 .navbar a {
   font-weight: bold;
@@ -31,29 +31,99 @@ ul.nav.navbar-nav li {
   margin: 0 0.5rem;
 }
 
-.onboarding >.navbar {
-background-image: url("./images/nav-bg.png");
-background-size: 100%;
+.onboarding > .navbar {
+  background-image: url("./images/nav-bg.png");
+  background-size: 100% 100%;
 }
+
+/*Home page*/
+
 
 .home-hero {
   width: 100vw;
   height: 100vh;
-  position: absolute;
   top: 0;
   left: 0;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: -1;
-  background-image: url("./images//signed-out-home.jpg");
   text-align: center;
-  padding: 1rem;
   background-position: center center;
   background-size: cover;
+}
+
+
+
+.home-hero-content {
+  background-color: #fff;
+}
+
+
+
+.cell-one {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex: 1;
+  background-color: #fff;
+}
+
+
+h1 {
+  font-size: 27px;
+  line-height: 32px;
+  font-weight: bold;
+}
+
+.signupBlock {
+  max-width: 350px;
+  text-align: center;
+   color: #14171a;
+}
+
+.signupTitle {
+  margin-top: 48px;
+  font-weight: bold;
+}
+
+
+.cell-two {
+  background-color: #1da1f2;
+  position: relative;
+  align-items: center;
+  display: flex;  
+  justify-content: center;
+  overflow: hidden;
+
+}
+
+.communication-item {
   color: #fff;
-  text-shadow: 0 0 8px #66757f;
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  margin: 48px auto;
+  position: relative;
+}
+
+.communication-item > span > i {
+  font-size: 35px;
+  margin-right: 16px;
+}
+
+.buttons, li{
+  display: block;
+  margin-bottom: 16px;
+  list-style: none;
+  
+}
+
+li > a {
+  border-radius: 20px;
+  width: 200px;
 }
 
 #messages .list-group-item {
@@ -62,6 +132,26 @@ background-size: 100%;
   padding: 7px 20px 12px;
 }
 
-#messages:not(.no-hover) .list-group-ite,:hover {
+#messages:not(.no-hover) .list-group-item:hover {
   background-color: #e6ecf0;
+}
+
+.timeline-image {
+  border-radius: 50px;
+  height: 48px;
+  width: 48px;
+  margin: 2px 30px 10px 10px;
+  }
+
+.btn:hover {
+  cursor: pointer;
+}
+
+a.btn.btn-danger,
+a.btn.btn-danger:hover {
+  color: white
+}
+
+.navbar-header {
+  margin: 0 auto;
 }

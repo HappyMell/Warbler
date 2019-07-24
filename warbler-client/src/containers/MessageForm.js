@@ -11,14 +11,17 @@ class MessageForm extends Component {
     }
     handleNewMessage = event => {
         event.preventDefault();
-    }
+        this.props.postNewMessage(this.state.message);
+        this.setState({ message: "" });
+        this.props.history.push("/");
+    };
 
     render() {
         return (
             <form onSubmit={this.handleNewMessage}>
-                {this.props.errors && (
+                {this.props.errors.message && (
                     <div className="alert alert-danger">
-                        {this.props.errors}
+                        {this.props.errors.message}
                     </div>
                 )}
                 <input

@@ -12,7 +12,7 @@ const store = configureStore()
 if (localStorage.jwtToken) {
   setAuthorizationToken(localStorage.jwtToken);
   try {
-    store.dispatch(setCurrentUser(jwtDecode(localStorage.jwtDecode)));
+    store.dispatch(setCurrentUser(jwtDecode(localStorage.jwtToken)));
   } catch (e) {
     store.dispatch(setCurrentUser({}))
   }
