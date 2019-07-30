@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import DropImage from '../containers/Dropzone';
 
 class AuthForm extends Component {
     constructor(props) {
@@ -8,14 +10,13 @@ class AuthForm extends Component {
             email: "",
             username: "",
             password: "",
-            profileImageUrl: ""
         };
     }
 
     handleSubmit = e => {
         e.preventDefault();
-        const authType = this.props.signUp ? "signup" : "signin";
-        this.props
+            const authType = this.props.signUp ? "signup" : "signin";
+                 this.props
             .onAuth(authType, this.state)
             .then(() => {
                 this.props.history.push("/");
@@ -27,14 +28,14 @@ class AuthForm extends Component {
 
     handleChange = e => {
         this.setState({
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value,
         })
-    }
-
+    }    
 
     render() {
-        const { email, username, password, profileImageUrl } = this.state;
-        const { signUp, heading, buttonText, errors, history, removeError } = this.props;
+        const { email, username, password} = this.state;
+        const { heading, buttonText, errors, history, removeError } = this.props;
+     
 
         history.listen(() => {
             removeError();
@@ -43,25 +44,39 @@ class AuthForm extends Component {
         return (
             <div className="container">
                 <div className="row jusitfy-content-md-center text-center">
-                    <div className="col-lg-6">
-                        <form onSubmit={this.handleSubmit}>
-                            <h2>{heading}</h2>
-                            {errors.message && (
-                                <div className="alert alert-danger">{errors.message}</div>
-                            )}
-                            <label htmlFor="email">Email:</label>
-                            <input autoComplete="off" className="form-control" id="email" name="email" type="text" value={email} onChange={this.handleChange} />
-                            <label htmlFor="password">Password:</label>
-                            <input autoComplete="off" className="form-control" id="password" name="password" type="password" onChange={this.handleChange} value={password} />
-                            {signUp && (
-                                <div>
-                                    <label htmlFor="username">Username:</label>
-                                    <input autoComplete="off" className="form-control" id="username" name="username" type="text" value={username} onChange={this.handleChange} />
-                                    <label htmlFor="image-url">Image URL:</label>
-                                    <input className="form-control" id="image-url" name="profileImageUrl" type="text" value={profileImageUrl} onChange={this.handleChange} />
-                                </div>
-                            )}
-                            <button type="submit" className="btn btn-primary btn-block btn-lg">{buttonText}</button>
+                    <div className="col-sm-6">
+                        <form onSubmit={this.handleSubmit} >
+                            <div className="form-group shadow-sm mb-3">
+                                <h2>{heading}</h2>
+                                {errors.message && (
+                                    <div className="alert alert-danger">{errors.message}</div>
+                                )}
+                                {this.props.signUp ? (
+                                    <div>
+                                        < div className="form-group-two" >
+                                            <input autoComplete="off" className="form-control" placeholder="email" id="email" name="email" type="text" value={email} onChange={this.handleChange} />
+                                            <input autoComplete="off" className="form-control" placeholder="password" id="password" name="password" type="password" onChange={this.handleChange} value={password} />
+                                            <input autoComplete="off" className="form-control" placeholder="username" id="username" name="username" type="text" value={username} onChange={this.handleChange} />
+                                         <DropImage/>
+                                        </div >
+                                        <div className="login-info">
+                                            <button type="submit" className="logging-btn  btn btn-primary btn-md float-left">{buttonText}</button>
+
+                                        </div>
+                                    </div>
+                                ) : (
+                                        < div className="form-group-two" >
+                                            <input autoComplete="off" className="form-control" placeholder="email" id="email" name="email" type="text" value={email} onChange={this.handleChange} />
+                                            <input autoComplete="off" className="form-control" placeholder="password" id="password" name="password" type="password" onChange={this.handleChange} value={password} />
+                                            <button type="submit" className="logging-btn  btn btn-primary btn-md float-left">{buttonText}</button>
+
+                                            <div className="mt-4">
+                                                <p>New to Warbler? <Link to="signup">Sign up</Link></p>
+
+                                            </div>
+                                        </div>
+                                    )}
+                            </div>
                         </form>
                     </div>
                 </div>

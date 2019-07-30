@@ -11,7 +11,7 @@ exports.createMessage = async function (req, res, next) {
         await foundUser.save()
         let foundMessage = db.Message.findById(message._id).populate("user", {
             username: true,
-            profileImageUrl: true
+            image: true
         });
         return res.status(200).json(foundMessage);
     } catch (err) {

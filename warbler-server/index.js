@@ -14,6 +14,9 @@ const PORT = 3001;
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: true
+}))
 
 
 //Routes
@@ -26,7 +29,7 @@ app.get("/api/messages", loginRequired, async function (req, res, next) {
             .sort({ createdAt: "desc" })
             .populate("user", {
                 username: true,
-                profileImageUrl: true
+                image: true
             });
         return res.status(200).json(messages)
     } catch (err) {

@@ -11,6 +11,24 @@ const Homepage = ({ currentUser }) => {
             <div className="home-hero">
                 <div className="container-fluid h-100">
                     <div className="row h-100">
+
+                        <div className="col cell-one">
+                            <div className="signupBlock">
+                                <img src={Logo} alt="Warbler bird" />
+                                <h1>See whats happening in the world around you</h1>
+                                <div>
+                                    <h6 className="signupTitle">Join Warbler today</h6>
+                                    <div className="buttons">
+                                        <ul>
+                                            <li> <Link to="/signup" role="button" className="btn btn-primary">Sign up</Link></li>
+                                            <li><Link to="/signin" role="button" className="btn btn-outline-primary">Log In</Link></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                         <div className="col cell-two">
                             <div className="communication">
                                 <div className="communication-item">
@@ -27,21 +45,7 @@ const Homepage = ({ currentUser }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col cell-one">
-                            <div className="signupBlock">
-                                <img src={Logo} alt="Warbler bird" />
-                                <h1>See whats happening in the world around you</h1>
-                                <div>
-                                    <h6 className="signupTitle">Join Warbler today</h6>
-                                    <div className="buttons">
-                                        <ul>
-                                            <li> <Link to="/signup" role="button" className="btn btn-primary">Sign up</Link></li>
-                                            <li><Link to="/signin" role="button" className="btn btn-outline-primary">Log In</Link></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -52,7 +56,7 @@ const Homepage = ({ currentUser }) => {
     }
     return <div>
         <MessageTimeline
-            profileImageUrl={currentUser.user.profileImageUrl}
+           image={currentUser.user.url}
             username={currentUser.user.username} />
     </div>
 }

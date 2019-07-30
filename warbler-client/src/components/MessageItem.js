@@ -5,7 +5,7 @@ import DefaultProfileImg from '../images/default-profile-image.jpg';
 
 const MessageItem = ({
     date,
-    profileImageUrl,
+    image,
     text,
     username,
     removeMessage,
@@ -14,7 +14,7 @@ const MessageItem = ({
         <div>
             <li className="list-group-item">
                 <img
-                    src={profileImageUrl || DefaultProfileImg}
+                    src={image || DefaultProfileImg}
                     alt={username}
                     height="100"
                     width="100"

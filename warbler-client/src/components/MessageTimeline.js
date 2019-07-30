@@ -6,7 +6,7 @@ const MessageTimeline = props => {
     return (
         <div className="row">
             <UserAside
-                profileImageUrl={props.profileImageUrl}
+                image={props.image}
                 username={props.username} />
             <MessageList />
         </div>

@@ -1,4 +1,6 @@
 import axios from 'axios';
+import firebase from 'firebase/app';
+import 'firebase/storage';
 
 export function setTokenHeader(token) {
     if (token) {
@@ -20,3 +22,4 @@ export function apiCall(method, path, data) {
     });
 }
 
+ 

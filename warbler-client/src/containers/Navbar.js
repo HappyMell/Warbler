@@ -11,29 +11,52 @@ class Navbar extends Component {
     }
     render() {
         return (
-            <nav className="navbar navbar-expand">
-                <div className="container-fluid">
-                    <div className="navbar-header">
-                        <Link to="/" className="navbar-brand">
-                            <img src={Logo} alt="Warbler Home" />
-                        </Link>
-                    </div>
-                    {this.props.currentUser.isAuthenticated ? (
-                        <ul className="nav navbar-nav navbar-right">
-                            <li>
-                                <Link to={`/users/${this.props.currentUser.user.id}/messages/new`}>New Message</Link>
-                            </li>
-                            <li>
-                                <a onClick={this.logout}>Log Out</a>
-                            </li>
-                        </ul>
-                    ) : (
-                            <ul className="nav navbar-nav navbar-right">
-                                <li><Link to="/signup">Sign Up</Link></li>
-                                <li><Link to="/signin">Log In</Link></li>
-                            </ul>
-                        )}
+            <nav className="navbar navbar-expand-sm navbar-light bg-light shadow-sm p-3 rounded">
+
+                <div className="">
+                    <Link to="/" className="navbar-brand">
+                        <img src={Logo} alt="Warbler Home" />
+                    </Link>
                 </div>
+                {this.props.currentUser.isAuthenticated ? (
+
+                    <div className="navbar-nav ml-auto">
+                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div className="navbar-collapse collapse justify-content-between" id="navbarSupportedContent" >
+                            <ul className="nav navbar-nav mr-auto">
+                                <li className="nav-item">
+                                    <Link to={`/users/${this.props.currentUser.user.id}/messages/new`}>New Message</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <a onClick={this.logout}>Log Out</a>
+                                </li>
+                            </ul>
+
+
+                        </div>
+
+                    </div>
+
+                ) : (
+                        <div className="navbar-nav ml-auto">
+                            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span className="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div className="navbar-collapse collapse" id="navbarSupportedContent" >
+                                <ul className="nav navbar-nav mr-auto">
+                                    <li className="nav-item"><Link to="/signup">Sign Up</Link></li>
+                                    <li className="nav-item"><Link to="/signin">Log In</Link></li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+                    )}
+
             </nav>
         )
     }
