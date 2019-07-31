@@ -9,12 +9,30 @@ class MessageForm extends Component {
             message: ""
         };
     }
-    handleNewMessage = event => {
-        event.preventDefault();
-        this.props.postNewMessage(this.state.message);
-        this.setState({ message: "" });
-        this.props.history.push("/");
-    };
+    //handleNewMessage = event => {
+    //    event.preventDefault();
+     //   this.props.postNewMessage(this.state.message);
+     //   this.setState({ message: "" });
+     //   this.props.history.push("/");
+   // };
+
+    addMessage = (title) => {
+        const message = {...this.state.messages};
+        const id = Date.now()
+        message[id] = {
+            id: id,
+            title: title,
+            text: ''
+        };
+     
+    }
+  
+  updateMessage = (message) => {
+      const messages = {...this.state.messages};
+      messages[message.id] = message
+  
+      this.setState({messages})
+  }
 
     render() {
         return (

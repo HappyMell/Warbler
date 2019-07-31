@@ -4,9 +4,16 @@ import { fetchMessages, removeMessage } from '../store/actions/messages';
 import MessageItem from '../components/MessageItem';
 
 class MessageList extends Component {
-    componentDidMount() {
-        this.props.fetchMessages();
-    }
+    
+ 
+
+  //  componentDidMount() {
+  //      this.props.fetchMessages();
+  //  }
+
+
+  
+
     render() {
         const { messages, removeMessage, currentUser } = this.props
         let messageList = messages.map(m => (

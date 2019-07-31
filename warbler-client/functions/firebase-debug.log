@@ -1,0 +1,127 @@
+[debug] [2019-07-30T16:31:53.700Z] ----------------------------------------------------------------------
+[debug] [2019-07-30T16:31:53.703Z] Command:       D:\Program Files\nodejs\node.exe C:\Users\Mellisa\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-07-30T16:31:53.703Z] CLI Version:   7.2.1
+[debug] [2019-07-30T16:31:53.703Z] Platform:      win32
+[debug] [2019-07-30T16:31:53.703Z] Node Version:  v10.15.3
+[debug] [2019-07-30T16:31:53.705Z] Time:          Tue Jul 30 2019 17:31:53 GMT+0100 (British Summer Time)
+[debug] [2019-07-30T16:31:53.705Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-07-30T16:31:53.715Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-07-30T16:31:53.716Z] > authorizing via signed-in user
+[debug] [2019-07-30T16:31:53.716Z] [iam] checking project warbler-481e6 for permissions ["firebase.projects.get"]
+[debug] [2019-07-30T16:31:53.718Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/warbler-481e6:testIamPermissions  
+
+[debug] [2019-07-30T16:31:54.490Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-30T16:31:54.492Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/warbler-481e6  
+ 
+[debug] [2019-07-30T16:31:54.747Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'd:\Users\Mellisa\Desktop\Work\ColtSteel2\Warbler\warbler-client'...
+[info] 
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[debug] [2019-07-30T16:31:54.795Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/warbler-481e6/adminSdkConfig  
+ 
+[debug] [2019-07-30T16:31:55.014Z] <<< HTTP RESPONSE 200
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "d:\Users\Mellisa\Desktop\Work\ColtSteel2\Warbler\warbler-client\functions" for Cloud Functions...
+[debug] [2019-07-30T16:31:55.909Z] [runtime-status] Functions runtime initialized. {"cwd":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions","node_version":"10.15.3"}
+[debug] [2019-07-30T16:31:55.909Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true} {}
+[debug] [2019-07-30T16:31:55.913Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.3.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-07-30T16:31:55.915Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-07-30T16:31:55.916Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] +  functions: [http] function api initialized (http://localhost:5000/warbler-481e6/us-central1/api).
+[debug] [2019-07-30T16:32:02.060Z] Accepted request GET /warbler-481e6/us-central1/api --> api
+[debug] [2019-07-30T16:32:02.889Z] [runtime-status] Functions runtime initialized. {"cwd":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions","node_version":"10.15.3"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-07-30T16:32:02.890Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true} {}
+[debug] [2019-07-30T16:32:02.895Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.3.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-07-30T16:32:02.899Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-07-30T16:32:02.900Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-07-30T16:32:03.206Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-07-30T16:32:03.207Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-07-30T16:32:03.207Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-07-30T16:32:03.215Z] {"socketPath":"\\\\?\\pipe\\d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\7556"}
+[debug] [2019-07-30T16:32:03.218Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\7556"}
+[debug] [2019-07-30T16:32:03.225Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-07-30T16:32:03.234Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-07-30T16:32:16.498Z] Accepted request POST /warbler-481e6/us-central1/api/chirp --> api
+[debug] [2019-07-30T16:32:17.099Z] [runtime-status] Functions runtime initialized. {"cwd":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions","node_version":"10.15.3"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-07-30T16:32:17.100Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true} {}
+[debug] [2019-07-30T16:32:17.105Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.3.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-07-30T16:32:17.107Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-07-30T16:32:17.107Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-07-30T16:32:17.376Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-07-30T16:32:17.376Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-07-30T16:32:17.376Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-07-30T16:32:17.386Z] {"socketPath":"\\\\?\\pipe\\d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\12028"}
+[debug] [2019-07-30T16:32:17.387Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\12028"}
+[debug] [2019-07-30T16:32:17.419Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-07-30T16:32:17.504Z] [runtime-status] Ephemeral server survived. {}
+[info] >  Error: Unexpected error determining execution environment: Invalid response from metadata service: incorrect Metadata-Flavor header.
+[info] >      at metadataAccessor (d:\Users\Mellisa\Desktop\Work\ColtSteel2\Warbler\warbler-client\functions\node_modules\gcp-metadata\build\src\index.js:56:19)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-07-30T16:36:09.629Z] File d:\Users\Mellisa\Desktop\Work\ColtSteel2\Warbler\warbler-client\functions\index.js changed, reloading triggers
+[debug] [2019-07-30T16:36:11.458Z] [runtime-status] Functions runtime initialized. {"cwd":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions","node_version":"10.15.3"}
+[debug] [2019-07-30T16:36:11.459Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true} {}
+[debug] [2019-07-30T16:36:11.464Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.3.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-07-30T16:36:11.466Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-07-30T16:36:11.467Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-07-30T16:38:30.642Z] Accepted request POST /warbler-481e6/us-central1/api/chirp --> api
+[debug] [2019-07-30T16:38:31.272Z] [runtime-status] Functions runtime initialized. {"cwd":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions","node_version":"10.15.3"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-07-30T16:38:31.273Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true} {}
+[debug] [2019-07-30T16:38:31.279Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.3.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-07-30T16:38:31.281Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-07-30T16:38:31.281Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-07-30T16:38:31.565Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-07-30T16:38:31.565Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-07-30T16:38:31.565Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-07-30T16:38:31.573Z] {"socketPath":"\\\\?\\pipe\\d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\11828"}
+[debug] [2019-07-30T16:38:31.574Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\11828"}
+[debug] [2019-07-30T16:38:31.604Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-07-30T16:38:31.606Z] [runtime-status] Ephemeral server survived. {}
+[info] >  SyntaxError: Unexpected token o in JSON at position 1
+[info] >      at JSON.parse (<anonymous>)
+[info] >      at app.post (d:\Users\Mellisa\Desktop\Work\ColtSteel2\Warbler\warbler-client\functions\index.js:30:20)
+[info] >      at Layer.handle [as handle_request] (d:\Users\Mellisa\Desktop\Work\ColtSteel2\Warbler\warbler-client\functions\node_modules\express\lib\router\layer.js:95:5)
+[info] >      at next (d:\Users\Mellisa\Desktop\Work\ColtSteel2\Warbler\warbler-client\functions\node_modules\express\lib\router\route.js:137:13)
+[info] >      at Route.dispatch (d:\Users\Mellisa\Desktop\Work\ColtSteel2\Warbler\warbler-client\functions\node_modules\express\lib\router\route.js:112:3)
+[info] >      at Layer.handle [as handle_request] (d:\Users\Mellisa\Desktop\Work\ColtSteel2\Warbler\warbler-client\functions\node_modules\express\lib\router\layer.js:95:5)
+[info] >      at d:\Users\Mellisa\Desktop\Work\ColtSteel2\Warbler\warbler-client\functions\node_modules\express\lib\router\index.js:281:22
+[info] >      at Function.process_params (d:\Users\Mellisa\Desktop\Work\ColtSteel2\Warbler\warbler-client\functions\node_modules\express\lib\router\index.js:335:12)
+[info] >      at next (d:\Users\Mellisa\Desktop\Work\ColtSteel2\Warbler\warbler-client\functions\node_modules\express\lib\router\index.js:275:10)
+[info] >      at expressInit (d:\Users\Mellisa\Desktop\Work\ColtSteel2\Warbler\warbler-client\functions\node_modules\express\lib\middleware\init.js:40:5)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-07-30T16:39:08.391Z] File d:\Users\Mellisa\Desktop\Work\ColtSteel2\Warbler\warbler-client\functions\index.js changed, reloading triggers
+[debug] [2019-07-30T16:39:10.210Z] [runtime-status] Functions runtime initialized. {"cwd":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions","node_version":"10.15.3"}
+[debug] [2019-07-30T16:39:10.211Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true} {}
+[debug] [2019-07-30T16:39:10.216Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.3.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-07-30T16:39:10.219Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-07-30T16:39:10.220Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-07-30T16:39:13.072Z] Accepted request POST /warbler-481e6/us-central1/api/chirp --> api
+[debug] [2019-07-30T16:39:13.660Z] [runtime-status] Functions runtime initialized. {"cwd":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions","node_version":"10.15.3"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-07-30T16:39:13.662Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true} {}
+[debug] [2019-07-30T16:39:13.667Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.3.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-07-30T16:39:13.669Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-07-30T16:39:13.669Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-07-30T16:39:13.949Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-07-30T16:39:13.949Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-07-30T16:39:13.950Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-07-30T16:39:13.958Z] {"socketPath":"\\\\?\\pipe\\d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\10900"}
+[debug] [2019-07-30T16:39:13.959Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\10900"}
+[debug] [2019-07-30T16:39:13.989Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-07-30T16:39:14.077Z] [runtime-status] Ephemeral server survived. {}
+[info] >  Error: Unexpected error determining execution environment: Invalid response from metadata service: incorrect Metadata-Flavor header.
+[info] >      at metadataAccessor (d:\Users\Mellisa\Desktop\Work\ColtSteel2\Warbler\warbler-client\functions\node_modules\gcp-metadata\build\src\index.js:56:19)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-07-31T11:37:43.431Z] File d:\Users\Mellisa\Desktop\Work\ColtSteel2\Warbler\warbler-client\functions\index.js changed, reloading triggers
+[debug] [2019-07-31T11:37:45.384Z] [runtime-status] Functions runtime initialized. {"cwd":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions","node_version":"10.15.3"}
+[debug] [2019-07-31T11:37:45.385Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true} {}
+[debug] [2019-07-31T11:37:45.391Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.3.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-07-31T11:37:45.394Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-07-31T11:37:45.395Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"d:\\Users\\Mellisa\\Desktop\\Work\\ColtSteel2\\Warbler\\warbler-client\\functions\\node_modules\\firebase-functions\\lib\\index.js"}

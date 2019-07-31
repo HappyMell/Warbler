@@ -5,10 +5,14 @@ import Logo from '../images/warbler-logo.png';
 import { logout } from '../store/actions/auth';
 
 class Navbar extends Component {
+   
+
     logout = e => {
         e.preventDefault();
         this.props.logout();
     }
+    
+
     render() {
         return (
             <nav className="navbar navbar-expand-sm navbar-light bg-light shadow-sm p-3 rounded">
@@ -18,7 +22,7 @@ class Navbar extends Component {
                         <img src={Logo} alt="Warbler Home" />
                     </Link>
                 </div>
-                {this.props.currentUser.isAuthenticated ? (
+                {this.props.authenticated ? (
 
                     <div className="navbar-nav ml-auto">
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
